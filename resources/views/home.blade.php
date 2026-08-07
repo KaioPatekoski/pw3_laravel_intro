@@ -1,0 +1,10 @@
+@extends('layouts.app')
+
+@section('title', 'Inicio')
+
+@section('content')
+    <section>
+        <h2>Bem-Vindo ao projeto</h2>
+        <p>Esta tela reutiliza o layout padrao com header e footer.</p>
+    </section>
+@endsection

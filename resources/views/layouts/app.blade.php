@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
 </head>
 <body>
-    <header>
-        <div>
+    <header class="site-header">
+        <div class="container">
             <h1>PW3 - Projeto Laravel</h1>
 
             <nav>
-                <a href="/"></a>
-                <a href="/landing"></a>
-                <a href="/admin"></a>
+                <a href="/">Inicio</a>
+                <a href="/landing">Landing</a>
+                <a href="/admin">Admin</a>
             </nav>
         </div>
     </header>
@@ -24,7 +24,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>{{ date('y') }} - Projeto Academico PW3
+            <p>{{ date('Y') }} - Projeto Academico PW3
         </div>
     </footer>
 
