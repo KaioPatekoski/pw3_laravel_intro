@@ -8,6 +8,7 @@ Route::get('/', function () {
 });
 
 Route::view('/landing', 'landing');
+Route::view('/admin', 'admin.dashboard');
 
 Route::get('/livros', [LivroController::class, 'index']);
 
