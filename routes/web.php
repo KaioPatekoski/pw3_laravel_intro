@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LivroController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::view('/landing', 'landing');
 
 Route::get('/livros', [LivroController::class, 'index']);
 
