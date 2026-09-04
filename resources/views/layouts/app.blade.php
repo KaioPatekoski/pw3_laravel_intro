@@ -19,11 +19,11 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="container mx-auto my-8 px-4">
         @yield('content')
     </main>
 
-    <footer class="site-footer">
+    <footer class="mt-8 rounded-xl bg-slate-900 px-6 py-5 text-sm text-slate-300">
         <div class="container">
             <p>{{ date('Y') }} - Projeto Academico PW3
         </div>
