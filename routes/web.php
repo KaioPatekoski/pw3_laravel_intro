@@ -10,7 +10,8 @@ Route::get('/', function () {
 });
 
 Route::view('/landing', 'landing');
-Route::view('/admin', 'admin.dashboard');
+// Rota de listagem e painel administrativo (GET)
+Route::get('/admin', [UserController::class, 'index']);
 
 //Rota para carreagar usuarios(GET)
 Route::get('/usuarios/novo', [UserController::class, 'create']);

@@ -7,6 +7,23 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    // Exibe a listagem de usuários com  suporte a filtro de busca
+    public function index(Request $request)
+    {
+        
+        // Captura o termo de busca enviado pelo GET
+        $busca = $request->input('busca');
+
+        if ($busca) {
+            $usuarios = User::where('name', 'like', "%{$busca}%", 'and')
+                ->orderBy('name', 'ASC')
+                ->get();
+
+        } else {
+            $usuarios = User::orderBy('name', 'ASC')->get();
+        }
+        return view('admin.dashboard', compact('usuarios', 'busca'));
+    }
     public function create()
     {
         return view('users.create');
